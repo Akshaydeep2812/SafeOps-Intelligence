@@ -35,7 +35,6 @@ React 19 Dashboard (Tailwind CSS, Recharts)     Ground Truth Benchmark (Separate
 
 ### Reviewer Notes: React JavaScript Conversion
 
-The React application was converted from TypeScript/TSX to JavaScript/JSX so its frontend can be read and maintained without TypeScript syntax. This is a source-language change, not a redesign or a change to the safety rules, API routes, data model, or intended user flows.
 
 - **Scope:** React components, the browser entry point, and the frontend API client in `src/` use `.jsx` and `.js`. The Express server and Vite configuration remain TypeScript because they are not React frontend files.
 - **Assumptions:** Existing API responses and component behavior are the contract to preserve. Type annotations and the frontend-only shared type definitions did not perform runtime validation, so removing them should not change runtime behavior. The API client continues to use the same endpoints and request payloads.
