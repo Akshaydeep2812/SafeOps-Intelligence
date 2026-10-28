@@ -1,0 +1,110 @@
+{
+  "validation_timestamp": "2026-10-28T06:22:49Z",
+  "status": "PASSED",
+  "profile": "starter",
+  "seed": 20261022,
+  "checks": [
+    {
+      "name": "primary_key_uniqueness",
+      "status": "PASSED",
+      "message": "All entity primary keys are distinct and immutable"
+    },
+    {
+      "name": "foreign_key_integrity",
+      "status": "PASSED",
+      "message": "Zero orphan foreign keys in relational graph"
+    },
+    {
+      "name": "required_fields_and_enums",
+      "status": "PASSED",
+      "message": "All required fields non-null, all enums match domain schema"
+    },
+    {
+      "name": "parent_child_relationships",
+      "status": "PASSED",
+      "message": "Machine -> Plant, AlarmDef -> Machine, Interlock -> Machine valid"
+    },
+    {
+      "name": "effective_date_consistency",
+      "status": "PASSED",
+      "message": "All effective_from precede effective_to or null"
+    },
+    {
+      "name": "event_ordering_chronology",
+      "status": "PASSED",
+      "message": "Event timestamps match source sequence, deliberate Case A isolated"
+    },
+    {
+      "name": "interlock_transition_validity",
+      "status": "PASSED",
+      "message": "Interlock transitions conform to machine rules, Case B isolated"
+    },
+    {
+      "name": "acknowledgement_sla_calculations",
+      "status": "PASSED",
+      "message": "SLA correctly calculated; invalid chronology excluded from delay avg"
+    },
+    {
+      "name": "incident_evidence_completeness",
+      "status": "PASSED",
+      "message": "Incidents link to valid evidence, Case C missing context flagged"
+    },
+    {
+      "name": "corrective_action_lifecycle",
+      "status": "PASSED",
+      "message": "Lifecycle states validated, Case E unverified closure flagged"
+    },
+    {
+      "name": "duplicate_replay_detection",
+      "status": "PASSED",
+      "message": "Replay duplicates distinguished from unique operational volume (Case D)"
+    },
+    {
+      "name": "aggregation_reconciliation",
+      "status": "PASSED",
+      "message": "Entity totals match source manifest precisely"
+    },
+    {
+      "name": "ground_truth_separation",
+      "status": "PASSED",
+      "message": "Ground truth stored in separate file; zero feature leakage"
+    },
+    {
+      "name": "generated_row_counts",
+      "status": "PASSED",
+      "message": "Generated 1226 alarms, 10 machines"
+    },
+    {
+      "name": "deterministic_seed_reproducibility",
+      "status": "PASSED",
+      "message": "Same seed reproduces identical dataset"
+    }
+  ],
+  "injected_anomalies": [
+    {
+      "case": "A",
+      "class": "CHRONOLOGY_ACK_BEFORE_ALARM",
+      "count": 1
+    },
+    {
+      "case": "B",
+      "class": "IMPOSSIBLE_INTERLOCK_STATE",
+      "count": 1
+    },
+    {
+      "case": "C",
+      "class": "INCIDENT_MISSING_CONTEXT",
+      "count": 1
+    },
+    {
+      "case": "D",
+      "class": "REPLAY_DUPLICATE_FLOOD",
+      "count": 24
+    },
+    {
+      "case": "E",
+      "class": "ACTION_CLOSED_WITHOUT_VERIFICATION",
+      "count": 1
+    }
+  ]
+}

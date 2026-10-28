@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  safeops-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      - PORT=3000
+      - NODE_ENV=production
+      - DATA_PROFILE=starter
+      - RANDOM_SEED=20261022
+    volumes:
+      - ./data:/app/applet/data
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3000/api/v1/dashboard/summary"]
+      interval: 30s
+      timeout: 10s
+      retries: 3

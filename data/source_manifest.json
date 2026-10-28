@@ -1,0 +1,49 @@
+{
+  "dataset_profile": "starter",
+  "fixed_seed": 20261022,
+  "software_version": "SafeOps-1.0.0",
+  "generation_timestamp": "2026-10-28T06:22:49Z",
+  "counts": {
+    "plants": 2,
+    "machines": 10,
+    "safety_zones": 8,
+    "interlocks": 20,
+    "alarm_definitions": 30,
+    "operator_shifts": 42,
+    "machine_state_events": 11,
+    "interlock_state_events": 106,
+    "alarm_events": 1226,
+    "acknowledgements": 1059,
+    "incidents": 69,
+    "corrective_actions": 68,
+    "recurrence_clusters": 30,
+    "ground_truth_records": 5
+  },
+  "edge_cases": [
+    {
+      "case": "A",
+      "class": "CHRONOLOGY_ACK_BEFORE_ALARM",
+      "count": 1
+    },
+    {
+      "case": "B",
+      "class": "IMPOSSIBLE_INTERLOCK_STATE",
+      "count": 1
+    },
+    {
+      "case": "C",
+      "class": "INCIDENT_MISSING_CONTEXT",
+      "count": 1
+    },
+    {
+      "case": "D",
+      "class": "REPLAY_DUPLICATE_FLOOD",
+      "count": 24
+    },
+    {
+      "case": "E",
+      "class": "ACTION_CLOSED_WITHOUT_VERIFICATION",
+      "count": 1
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "name": "SafeOps Intelligence",
+  "description": "Industrial safety monitoring, interlock violation tracking, alarm flood analysis, and explainable incident analytics platform.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

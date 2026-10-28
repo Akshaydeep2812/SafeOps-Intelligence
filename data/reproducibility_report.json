@@ -1,0 +1,9 @@
+{
+  "profile": "starter",
+  "seed": 20261022,
+  "reproducibility_status": "VERIFIED",
+  "canonical_checksum_sha256": "d062184d74ad25ef904c0d28f50e5726fb208f06d904c52a47f67a0f5e473d7f",
+  "records_evaluated": 1226,
+  "verified_at": "2026-10-28T06:22:49Z",
+  "notes": "Timestamp wall-clock excluded from canonical hash; deterministic generation guaranteed"
+}

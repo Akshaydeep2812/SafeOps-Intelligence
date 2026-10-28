@@ -1,0 +1,6 @@
+source_record_id,entity_type,scenario_id,expected_anomaly_class,expected_decision,expected_severity,description
+ALM-MACH-001-CASE-A-001,AlarmEvent,CASE_A,CHRONOLOGY_ACK_BEFORE_ALARM,FLAG_CHRONOLOGY_VIOLATION,HIGH,Acknowledgement timestamp is 45s earlier than alarm occurrence timestamp
+ISE-INT-MACH-001-01-CASE-B-001,InterlockStateEvent,CASE_B,IMPOSSIBLE_INTERLOCK_STATE,FLAG_SAFETY_INTERLOCK_VIOLATION,CRITICAL,Unauthorized interlock bypass while machine executed high speed stroke
+INC-2026-CASE-C-999,Incident,CASE_C,INCIDENT_MISSING_CONTEXT,FLAG_DATA_QUALITY_EXCEPTION,HIGH,Incident registered in system without primary alarm or state evidence
+REPLAY-BURST-MACH-001-01,AlarmEventCluster,CASE_D,REPLAY_DUPLICATE_FLOOD,DEDUPLICATE_REPLAY_FLOOD,MEDIUM,Burst of 25 alarms originating from identical network packet replay
+ACT-INC-2026-CASE-E-001-01,CorrectiveAction,CASE_E,ACTION_CLOSED_WITHOUT_VERIFICATION,FLAG_LIFECYCLE_VIOLATION,HIGH,Corrective action marked closed/completed without required verification audit
