@@ -300,3 +300,34 @@ These notes describe the reported validation environment; rerun the checks again
 ## Important Scope Boundary
 
 SafeOps Intelligence is documented as an industrial safety analytics and investigation aid. Synthetic benchmark performance and passing software tests do not replace site-specific hazard analysis, safety-system certification, operational procedures, or validation by qualified industrial safety personnel.
+
+
+
+### Prompt History – Industrial Safety Intelligence Application
+
+**Prompt 1: Understanding the Problem**  
+Help me understand the industrial safety analytics problem statement in simple terms. Explain the business objective, key requirements, expected output, and important challenges.
+
+**Prompt 2: Planning the Architecture**  
+Design a practical full-stack architecture for an industrial safety monitoring application using React, FastAPI, Python, and PostgreSQL. Explain the database entities, their relationships, and the overall data flow.
+
+**Prompt 3: Synthetic Data Generation**  
+Create a reproducible synthetic dataset representing multiple industrial plants, machines, alarms, operator acknowledgements, incidents, and corrective actions. Include realistic relationships, validation rules, and deterministic data generation.
+
+**Prompt 4: Safety Anomaly Detection**  
+Implement an explainable, rule-based engine to detect safety-related data anomalies, including incorrect event chronology, impossible interlock states, missing incident context, duplicate alarm replays, and corrective actions closed without verification.
+
+**Prompt 5: Evidence and Traceability**  
+Ensure every detected anomaly can be traced back to its original records. Preserve raw data, explain why each issue was detected, and avoid making unsupported assumptions.
+
+**Prompt 6: Evaluation and Testing**  
+Create separate ground-truth labels to evaluate the detection engine. Measure precision, recall, F1 score, and other relevant metrics. Add automated tests for the detection rules and data validation.
+
+**Prompt 7: Dashboard and API Development**  
+Build REST APIs and a user-friendly dashboard to explore alarms, investigate incidents, identify recurring safety issues, review corrective actions, and view detection performance.
+
+**Prompt 8: Deployment and Documentation**  
+Prepare the application for reproducible execution and deployment using Docker. Include setup instructions, database migrations, sample data exports, API documentation, testing instructions, and a clear README.
+
+**Prompt 9: End-to-End Validation**  
+Validate the complete workflow from synthetic data generation to anomaly detection, evidence tracing, dashboard visualization, and evaluation. Ensure the results are reproducible and the application can be demonstrated reliably.
